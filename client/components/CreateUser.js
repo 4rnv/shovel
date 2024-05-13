@@ -19,7 +19,7 @@ function CreateUser() {
 
         const trimmedFirstName = firstName.trim();
         const trimmedLastName = lastName.trim();
-        const trimmedUsername = username.trim();
+        const trimmedUsername = username.trim().toLowerCase();
         
         if (!trimmedFirstName || !trimmedLastName || !trimmedUsername || !password || !color) {
             setErrorMessage("All fields must be filled");

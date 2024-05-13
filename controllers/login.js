@@ -8,6 +8,8 @@ const login = (req, res, models) => {
         return;
     }
 
+    username = username.trim().toLowerCase();
+    
     models.User.findOne({ where: { username: username } })
         .then(user => {
             if (!user) {
